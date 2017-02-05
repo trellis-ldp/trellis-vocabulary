@@ -1,0 +1,45 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix trellis: <http://acdc.amherst.edu/ns/trellis#> .
+
+<http://acdc.amherst.edu/ns/trellis#> a owl:Ontology ;
+    owl:versionInfo "0.1" ;
+    rdfs:comment "Trellis Repository Ontology, Version 0.1" .
+
+trellis:ConstraintViolation a rdfs:Class ;
+    rdfs:label "A violation of the RDF contraints" .
+
+trellis:AccessViolation a rdfs:Class ;
+    rdfs:label "An access violation" .
+
+trellis:DefaultInteractionModel a rdfs:Class ;
+    rdfs:label "The default interaction model assigned to a resource" .
+
+trellis:InvalidInteractionModel a rdfs:Class ;
+    rdfs:subClassOf trellis:ConstraintViolation ;
+    rdfs:label "In invalid LDP interaction model" .
+
+trellis:InvalidType a rdfs:Class ;
+    rdfs:subClassOf trellis:ConstraintViolation ;
+    rdfs:label "An invalid rdf:type used in the supplied graph" .
+
+trellis:InvalidCardinality a rdfs:Class ;
+    rdfs:subClassOf trellis:ConstraintViolation ;
+    rdfs:label "A property had the incorrect cardinality" .
+
+trellis:InvalidRange a rdfs:Class ;
+    rdfs:subClassOf trellis:ConstraintViolation ;
+    rdfs:label "A property had an invalid rdfs:range" .
+
+trellis:InvalidProperty a rdfs:Class ;
+    rdfs:subClassOf trellis:ConstraintViolation ;
+    rdfs:label "A property was not allowed for this interaction model" .
+
+trellis:InvalidSubject a rdfs:Class ;
+    rdfs:subClassOf trellis:ConstraintViolation ;
+    rdfs:label "A triple had an invalid subject" .
+
+trellis:containedBy a rdf:Property ;
+    rdfs:label "the resource that contains this resource" .
+
