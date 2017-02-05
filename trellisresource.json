@@ -1,0 +1,21 @@
+{
+    "@context" : {
+        "dc" : "http://purl.org/dc/terms/" ,
+        "ldp" : "http://www.w3.org/ns/ldp#" ,
+        "acl" : "http://www.w3.org/ns/auth/acl#" ,
+        "xsd" : "http://www.w3.org/2001/XMLSchema#" ,
+        "trellis" : "http://acdc.amherst.edu/ns/trellis#" ,
+
+        "accessControl" : { "@id" : "acl:accessControl", "@type" : "@id" } ,
+        "inbox" : { "@id" : "ldp:inbox", "@type" : "@id" } ,
+        "format" : "dc:format",
+        "containedBy" : { "@id" : "trellis:containedBy" , "@type" : "@id" } ,
+        "size" : { "@id" : "dc:extent" , "@type" : "xsd:long" } ,
+        "datastream" : { "@id" : "dc:hasPart" , "@type" : "@id" } ,
+        "created" : { "@id" : "dc:created", "@type" : "xsd:dateTime" } ,
+        "modified" : { "@id" : "dc:modified", "@type" : "xsd:dateTime" } ,
+        "creator" : { "@id" : "dc:creator", "@type" : "@id" } ,
+        "type" : { "@id" : "dc:type", "@type" : "@id" }
+    }
+}
+
