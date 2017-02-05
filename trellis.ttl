@@ -1,45 +1,83 @@
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix trellis: <http://acdc.amherst.edu/ns/trellis#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix : <http://acdc.amherst.edu/ns/trellis#> .
 
-<http://acdc.amherst.edu/ns/trellis#> a owl:Ontology ;
+: a owl:Ontology ;
     owl:versionInfo "0.1" ;
+    vann:preferredNamespaceUri "http://acdc.amherst.edu/ns/trellis#";
+    vann:preferredNamespacePrefix "trellis";
     rdfs:comment "Trellis Repository Ontology, Version 0.1" .
 
-trellis:ConstraintViolation a rdfs:Class ;
-    rdfs:label "A violation of the RDF contraints" .
+:ConstraintViolation a rdfs:Class ;
+    rdfs:label "constraint violation" ;
+    rdfs:comment "A defined constraint was violated with the provided RDF graph" ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
 
-trellis:AccessViolation a rdfs:Class ;
-    rdfs:label "An access violation" .
+:AccessViolation a rdfs:Class ;
+    rdfs:label "access violation" ;
+    rdfs:comment "The given operation (e.g. read, write, append) is not permitted to the provided user/group with regard to the specified resource(s)." ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
 
-trellis:DefaultInteractionModel a rdfs:Class ;
-    rdfs:label "The default interaction model assigned to a resource" .
+:DefaultInteractionModel a rdfs:Class ;
+    rdfs:label "default interaction model" ;
+    rdfs:comment "In the absence of a Link header defining an LDP interaction model, the implementation default will be assigned to the new resource." ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
 
-trellis:InvalidInteractionModel a rdfs:Class ;
+:InvalidInteractionModel a rdfs:Class ;
+    rdfs:label "invalid interaction model" ;
+    rdfs:comment "An invalid LDP interaction model was provided" ;
     rdfs:subClassOf trellis:ConstraintViolation ;
-    rdfs:label "In invalid LDP interaction model" .
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
 
-trellis:InvalidType a rdfs:Class ;
+:InvalidType a rdfs:Class ;
+    rdfs:label "invalid type" ;
+    rdfs:comment "An invalid rdf:type was included in the supplied graph, such as an invalid LDP resource type or a server-managed type." ;
     rdfs:subClassOf trellis:ConstraintViolation ;
-    rdfs:label "An invalid rdf:type used in the supplied graph" .
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
 
-trellis:InvalidCardinality a rdfs:Class ;
+:InvalidCardinality a rdfs:Class ;
+    rdfs:label "invalid cardinality" ;
+    rdfs:comment "For properties with cardinality restrictions, the supplied graph did not correspond to the defined rules regarding cardinality." ;
     rdfs:subClassOf trellis:ConstraintViolation ;
-    rdfs:label "A property had the incorrect cardinality" .
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
 
-trellis:InvalidRange a rdfs:Class ;
+:InvalidRange a rdfs:Class ;
+    rdfs:label "invalid range" ;
+    rdfs:comment "For properties with range constraints (e.g. URI or in-domain ranges), the supplied graph violated these constraints." ;
     rdfs:subClassOf trellis:ConstraintViolation ;
-    rdfs:label "A property had an invalid rdfs:range" .
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
 
-trellis:InvalidProperty a rdfs:Class ;
+:InvalidProperty a rdfs:Class ;
+    rdfs:label "invalid property" ;
+    rdfs:comment "LDP interaction models permit certain valid properties; the supplied graph did not conform to the defined rules for an allowable property." ;
     rdfs:subClassOf trellis:ConstraintViolation ;
-    rdfs:label "A property was not allowed for this interaction model" .
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
 
-trellis:InvalidSubject a rdfs:Class ;
+:InvalidSubject a rdfs:Class ;
+    rdfs:label "invalid subject" ;
+    rdfs:comment "The supplied graph included subject URIs that violate the defined constraints (e.g. a single-subject rule)." ;
     rdfs:subClassOf trellis:ConstraintViolation ;
-    rdfs:label "A triple had an invalid subject" .
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
 
-trellis:containedBy a rdf:Property ;
-    rdfs:label "the resource that contains this resource" .
+:containedBy a rdf:Property ;
+    rdfs:label "contained by" ;
+    rdfs:comment "Links a resource to the container resource that encloses it." ;
+    rdfs:domain ldp:Resource ;
+    rdfs:range ldp:Container ;
+    rdfs:isDefinedBy : ;
+    owl:inverseOf ldp:contains ;
+    vs:term_status "working-draft" .
 
