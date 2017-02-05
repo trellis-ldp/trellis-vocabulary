@@ -12,6 +12,18 @@
     vann:preferredNamespacePrefix "trellis";
     rdfs:comment "Trellis Repository Ontology, Version 0.1" .
 
+:Asynchronous a rdfs:Class ;
+    rdfs:label "asynchronous" ;
+    rdfs:comment "A Prefer header used to indicate an asynchronous operation" ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
+
+:Synchronous a rdfs:Class ;
+    rdfs:label "synchronous" ;
+    rdfs:comment "A Prefer header used to indicate a synchronous operation" ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
+
 :ConstraintViolation a rdfs:Class ;
     rdfs:label "constraint violation" ;
     rdfs:comment "A defined constraint was violated with the provided RDF graph" ;
