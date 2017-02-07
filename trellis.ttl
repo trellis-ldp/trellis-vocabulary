@@ -24,6 +24,12 @@
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
+:AuditResources a rdfs:Class ;
+    rdfs:label "audit resources" ;
+    rdfs:comment "A Prefer header used to request audit-related triples" ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
+
 :ConstraintViolation a rdfs:Class ;
     rdfs:label "constraint violation" ;
     rdfs:comment "A defined constraint was violated with the provided RDF graph" ;
