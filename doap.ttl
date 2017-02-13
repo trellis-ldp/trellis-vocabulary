@@ -1,0 +1,77 @@
+@prefix asfext: <http://projects.apache.org/ns/asfext#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://acdc.amherst.edu/trellis/project> a doap:Project ;
+    doap:license <http://www.apache.org/licenses/LICENSE-2.0> ;
+    doap:homepage <https://github.com/trellis-ldp/trellis> ;
+    doap:shortdesc "Trellis is a repository system for the management and dissemination of linked digital content" ;
+    doap:description "Trellis is a distributed, modular repository system for managing and disseminating digital content. It implements the Fedora and Linked Data Platform APIs." ;
+    doap:wiki <https://github.com/trellis-ldp/trellis/wiki> ;
+    doap:programming-language "Java" , "Clojure" ;
+    doap:repository
+        [ a doap:GitRepository ;
+            doap:location <https://github.com/trellis-ldp/trellis-api.git> ;
+            doap:browse <https://github.com/trellis-ldp/trellis-api> ] ,
+        [ a doap:GitRepository ;
+            doap:location <https://github.com/trellis-ldp/trellis-spi.git> ;
+            doap:browse <https://github.com/trellis-ldp/trellis-spi> ] ,
+        [ a doap:GitRepository ;
+            doap:location <https://github.com/trellis-ldp/trellis-vocabulary.git> ;
+            doap:browse <https://github.com/trellis-ldp/trellis-vocabulary> ] ,
+        [ a doap:GitRepository ;
+            doap:location <https://github.com/trellis-ldp/trellis-ontology.git> ;
+            doap:browse <https://github.com/trellis-ldp/trellis-ontology> ] ,
+        [ a doap:GitRepository ;
+            doap:location <https://github.com/trellis-ldp/trellis-agent.git> ;
+            doap:browse <https://github.com/trellis-ldp/trellis-agent> ] ,
+        [ a doap:GitRepository ;
+            doap:location <https://github.com/trellis-ldp/trellis-amqp.git> ;
+            doap:browse <https://github.com/trellis-ldp/trellis-amqp> ] ,
+        [ a doap:GitRepository ;
+            doap:location <https://github.com/trellis-ldp/trellis-constraint-rules.git> ;
+            doap:browse <https://github.com/trellis-ldp/trellis-constraint-rules> ] ,
+        [ a doap:GitRepository ;
+            doap:location <https://github.com/trellis-ldp/trellis-datastream.git> ;
+            doap:browse <https://github.com/trellis-ldp/trellis-datastream> ] ,
+        [ a doap:GitRepository ;
+            doap:location <https://github.com/trellis-ldp/trellis-id.git> ;
+            doap:browse <https://github.com/trellis-ldp/trellis-id> ] ,
+        [ a doap:GitRepository ;
+            doap:location <https://github.com/trellis-ldp/trellis-io-jena.git> ;
+            doap:browse <https://github.com/trellis-ldp/trellis-io-jena> ] ,
+        [ a doap:GitRepository ;
+            doap:location <https://github.com/trellis-ldp/trellis-jms.git> ;
+            doap:browse <https://github.com/trellis-ldp/trellis-jms> ] ,
+        [ a doap:GitRepository ;
+            doap:location <https://github.com/trellis-ldp/trellis-namespaces.git> ;
+            doap:browse <https://github.com/trellis-ldp/trellis-namespaces> ] ,
+        [ a doap:GitRepository ;
+            doap:location <https://github.com/trellis-ldp/trellis-rosid.git> ;
+            doap:browse <https://github.com/trellis-ldp/trellis-rosid> ] ,
+        [ a doap:GitRepository ;
+            doap:location <https://github.com/trellis-ldp/trellis-webac.git> ;
+            doap:browse <https://github.com/trellis-ldp/trellis-webac> ] ;
+    doap:maintainer [ a foaf:Person ;
+        foaf:name "Aaron Coburn" ;
+        foaf:mbox "acoburn @ (domain of organization URL)" ;
+        foaf:member [ a foaf:Organization ;
+            foaf:homepage <https://www.amherst.edu> ;
+            foaf:name "Amherst College" ] ] ;
+    doap:developer [ a foaf:Person ;
+        foaf:name "Aaron Coburn" ;
+        foaf:mbox "acoburn @ (domain of organization URL)" ;
+        foaf:member [ a foaf:Organization ;
+            foaf:homepage <https://www.amherst.edu> ;
+            foaf:name "Amherst College" ] ] ;
+    asfext:implements
+        [ a asfext:Standard ;
+            asfext:title "Fedora API" ;
+            asfext:body "The Fedora API Specification" ;
+            asfext:id "fedora-api" ;
+            asfext:url <http://fedora.info/spec/> ] ,
+        [ a asfext:Standard ;
+            asfext:title "Linked Data Platform" ;
+            asfext:body "The W3C Linked Data Platform" ;
+            asfext:id "ldp" ;
+            asfext:url <https://www.w3.org/TR/ldp/> ] .
