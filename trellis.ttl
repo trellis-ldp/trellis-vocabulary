@@ -18,14 +18,14 @@
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
-:ServerManagedResources a rdfs:Class ;
-    rdfs:label "server managed resources" ;
+:ServerManagedTriples a rdfs:Class ;
+    rdfs:label "server managed triples" ;
     rdfs:comment "URI identifying a LDPR's server-managed triples" ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
-:UserManagedResources a rdfs:Class ;
-    rdfs:label "user managed resources" ;
+:UserManagedTriples a rdfs:Class ;
+    rdfs:label "user managed triples" ;
     rdfs:comment "URI identifying a LDP-RS's user-managed resource triples" ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
