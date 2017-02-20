@@ -14,19 +14,19 @@
 
 :PreferAudit a rdfs:Class ;
     rdfs:label "prefer audit" ;
-    rdfs:comment "URI identifying a LDPR's audit triples" ;
+    rdfs:comment "IRI identifying a LDPR's audit triples" ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
 :ServerManagedTriples a rdfs:Class ;
     rdfs:label "server managed triples" ;
-    rdfs:comment "URI identifying a LDPR's server-managed triples" ;
+    rdfs:comment "IRI identifying a LDPR's server-managed triples" ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
 :UserManagedTriples a rdfs:Class ;
     rdfs:label "user managed triples" ;
-    rdfs:comment "URI identifying a LDP-RS's user-managed resource triples" ;
+    rdfs:comment "IRI identifying a LDP-RS's user-managed resource triples" ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
@@ -71,7 +71,7 @@
 
 :InvalidRange a rdfs:Class ;
     rdfs:label "invalid range" ;
-    rdfs:comment "For properties with range constraints (e.g. URI or in-domain ranges), the supplied graph violated these constraints." ;
+    rdfs:comment "For properties with range constraints (e.g. IRI or in-domain ranges), the supplied graph violated these constraints." ;
     rdfs:subClassOf trellis:ConstraintViolation ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
@@ -79,13 +79,6 @@
 :InvalidProperty a rdfs:Class ;
     rdfs:label "invalid property" ;
     rdfs:comment "LDP interaction models permit certain valid properties; the supplied graph did not conform to the defined rules for an allowable property." ;
-    rdfs:subClassOf trellis:ConstraintViolation ;
-    rdfs:isDefinedBy : ;
-    vs:term_status "working-draft" .
-
-:InvalidSubject a rdfs:Class ;
-    rdfs:label "invalid subject" ;
-    rdfs:comment "The supplied graph included subject URIs that violate the defined constraints (e.g. a single-subject rule)." ;
     rdfs:subClassOf trellis:ConstraintViolation ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
