@@ -12,77 +12,19 @@
     vann:preferredNamespacePrefix "trellis";
     rdfs:comment "Trellis Repository Ontology, Version 0.1" .
 
-:PreferAudit a rdfs:Class ;
-    rdfs:label "prefer audit" ;
-    rdfs:comment "IRI identifying a LDPR's audit triples" ;
-    rdfs:isDefinedBy : ;
-    vs:term_status "working-draft" .
-
-:ServerManagedTriples a rdfs:Class ;
-    rdfs:label "server managed triples" ;
-    rdfs:comment "IRI identifying a LDPR's server-managed triples" ;
-    rdfs:isDefinedBy : ;
-    vs:term_status "working-draft" .
-
-:UserManagedTriples a rdfs:Class ;
-    rdfs:label "user managed triples" ;
-    rdfs:comment "IRI identifying a LDP-RS's user-managed resource triples" ;
-    rdfs:isDefinedBy : ;
-    vs:term_status "working-draft" .
-
+# ------------
+#   Classes
+# ------------
 :ConstraintViolation a rdfs:Class ;
     rdfs:label "constraint violation" ;
     rdfs:comment "A defined constraint was violated with the provided RDF graph" ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
-:AccessViolation a rdfs:Class ;
-    rdfs:label "access violation" ;
-    rdfs:comment "The given operation (e.g. read, write, append) is not permitted to the provided user/group with regard to the specified resource(s)." ;
-    rdfs:isDefinedBy : ;
-    vs:term_status "working-draft" .
 
-:DefaultInteractionModel a rdfs:Class ;
-    rdfs:label "default interaction model" ;
-    rdfs:comment "In the absence of a Link header defining an LDP interaction model, the implementation default will be assigned to the new resource." ;
-    rdfs:isDefinedBy : ;
-    vs:term_status "working-draft" .
-
-:InvalidInteractionModel a rdfs:Class ;
-    rdfs:label "invalid interaction model" ;
-    rdfs:comment "An invalid LDP interaction model was provided" ;
-    rdfs:subClassOf trellis:ConstraintViolation ;
-    rdfs:isDefinedBy : ;
-    vs:term_status "working-draft" .
-
-:InvalidType a rdfs:Class ;
-    rdfs:label "invalid type" ;
-    rdfs:comment "An invalid rdf:type was included in the supplied graph, such as an invalid LDP resource type or a server-managed type." ;
-    rdfs:subClassOf trellis:ConstraintViolation ;
-    rdfs:isDefinedBy : ;
-    vs:term_status "working-draft" .
-
-:InvalidCardinality a rdfs:Class ;
-    rdfs:label "invalid cardinality" ;
-    rdfs:comment "For properties with cardinality restrictions, the supplied graph did not correspond to the defined rules regarding cardinality." ;
-    rdfs:subClassOf trellis:ConstraintViolation ;
-    rdfs:isDefinedBy : ;
-    vs:term_status "working-draft" .
-
-:InvalidRange a rdfs:Class ;
-    rdfs:label "invalid range" ;
-    rdfs:comment "For properties with range constraints (e.g. IRI or in-domain ranges), the supplied graph violated these constraints." ;
-    rdfs:subClassOf trellis:ConstraintViolation ;
-    rdfs:isDefinedBy : ;
-    vs:term_status "working-draft" .
-
-:InvalidProperty a rdfs:Class ;
-    rdfs:label "invalid property" ;
-    rdfs:comment "LDP interaction models permit certain valid properties; the supplied graph did not conform to the defined rules for an allowable property." ;
-    rdfs:subClassOf trellis:ConstraintViolation ;
-    rdfs:isDefinedBy : ;
-    vs:term_status "working-draft" .
-
+# ---------------
+#   Properties
+# ---------------
 :containedBy a rdf:Property ;
     rdfs:label "contained by" ;
     rdfs:comment "Links a resource to the container resource that encloses it." ;
@@ -90,5 +32,69 @@
     rdfs:range ldp:Container ;
     rdfs:isDefinedBy : ;
     owl:inverseOf ldp:contains ;
+    vs:term_status "working-draft" .
+
+
+# ----------------------
+#   Named Individuals
+# ----------------------
+:AccessViolation a :ConstraintViolation ;
+    rdfs:label "access violation" ;
+    rdfs:comment "The given operation (e.g. read, write, append) is not permitted to the provided user/group with regard to the specified resource(s)." ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
+
+:DefaultInteractionModel a rdfs:Resource ;
+    rdfs:label "default interaction model" ;
+    rdfs:comment "In the absence of a Link header defining an LDP interaction model, the implementation default will be assigned to the new resource." ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
+
+:InvalidInteractionModel a :ConstraintViolation ;
+    rdfs:label "invalid interaction model" ;
+    rdfs:comment "An invalid LDP interaction model was provided" ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
+
+:InvalidCardinality a :ConstraintViolation ;
+    rdfs:label "invalid cardinality" ;
+    rdfs:comment "For properties with cardinality restrictions, the supplied graph did not correspond to the defined rules regarding cardinality." ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
+
+:InvalidProperty a :ConstraintViolation ;
+    rdfs:label "invalid property" ;
+    rdfs:comment "LDP interaction models permit certain valid properties; the supplied graph did not conform to the defined rules for an allowable property." ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
+
+:InvalidRange a :ConstraintViolation ;
+    rdfs:label "invalid range" ;
+    rdfs:comment "For properties with range constraints (e.g. IRI or in-domain ranges), the supplied graph violated these constraints." ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
+
+:InvalidType a :ConstraintViolation ;
+    rdfs:label "invalid type" ;
+    rdfs:comment "An invalid rdf:type was included in the supplied graph, such as an invalid LDP resource type or a server-managed type." ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
+
+:PreferAudit a rdfs:Resource ;
+    rdfs:label "prefer audit" ;
+    rdfs:comment "IRI identifying a LDPR's audit triples" ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
+
+:ServerManagedTriples a rdfs:Resource ;
+    rdfs:label "server managed triples" ;
+    rdfs:comment "IRI identifying a LDPR's server-managed triples" ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
+
+:UserManagedTriples a rdfs:Resource ;
+    rdfs:label "user managed triples" ;
+    rdfs:comment "IRI identifying a LDP-RS's user-managed resource triples" ;
+    rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
