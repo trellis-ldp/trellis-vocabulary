@@ -6,3 +6,8 @@ This repository includes
   * A [DOAP file](doap.ttl) describing the project itself
   * A [JSON-LD Context](trellisresource.jsonld) file used by internal data representations
 
+The Trellis ontology is written in Turtle syntax. To generate RDF/XML, JSON-LD and an HTML
+representation, run this script:
+
+    python scripts/ttl2others.py trellis.ttl
+

@@ -12,8 +12,6 @@
   <xsl:variable name="title" select="/rdf:RDF/rdf:Description[rdf:type/@rdf:resource='http://www.w3.org/2002/07/owl#Ontology']/rdfs:label"/>
   <xsl:variable name="namespace" select="/rdf:RDF/rdf:Description[rdf:type/@rdf:resource='http://www.w3.org/2002/07/owl#Ontology']/vann:preferredNamespaceUri"/>
   <xsl:variable name="prefix" select="/rdf:RDF/rdf:Description[rdf:type/@rdf:resource='http://www.w3.org/2002/07/owl#Ontology']/vann:preferredNamespacePrefix"/>
-  <xsl:variable name="version" select="/rdf:RDF/rdf:Description[rdf:type/@rdf:resource='http://www.w3.org/2002/07/owl#Ontology']/owl:versionInfo"/>
-  <xsl:variable name="comment" select="/rdf:RDF/rdf:Description[rdf:type/@rdf:resource='http://www.w3.org/2002/07/owl#Ontology']/rdfs:comment"/>
 
   <xsl:template match="/rdf:RDF">
     <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
@@ -26,38 +24,42 @@
       <body>
         <header id="banner"></header>
         <main>
-          <h1><xsl:value-of select="$title"/></h1>
           <table>
-            <tr>
-              <td><b>Namespace</b></td>
-              <td><pre><xsl:value-of select="$namespace"/></pre></td>
-            </tr>
-            <tr>
-              <td><b>Description</b></td>
-              <td><p><xsl:value-of select="$comment"/></p></td>
-            </tr>
-            <tr>
-              <td><b>Version</b></td>
-              <td><xsl:value-of select="$version"/></td>
-            </tr>
-            <xsl:if test="rdfs:seeAlso">
-              <tr>
-                <td><b>See Also</b></td>
-                <td>
-                  <xsl:for-each select="rdfs:seeAlso">
-                    <a>
-                      <xsl:attribute name="href">
-                        <xsl:value-of select="@rdf:resource"/>
-                      </xsl:attribute>
-                      <xsl:value-of select="@rdf:resource"/>
-                    </a>
-                    <xsl:if test="position() != last()">
-                      <xsl:text>, </xsl:text>
-                    </xsl:if>
-                  </xsl:for-each>
-                </td>
-              </tr>
-            </xsl:if>
+            <h1><xsl:value-of select="$title"/></h1>
+            <xsl:for-each select="/rdf:RDF/rdf:Description[rdf:type/@rdf:resource='http://www.w3.org/2002/07/owl#Ontology']">
+              <xsl:if test="position() = 1">
+                <tr>
+                  <td><b>Namespace</b></td>
+                  <td><pre><xsl:value-of select="vann:preferredNamespaceUri"/></pre></td>
+                </tr>
+                <tr>
+                  <td><b>Description</b></td>
+                  <td><p><xsl:value-of select="rdfs:comment"/></p></td>
+                </tr>
+                <tr>
+                  <td><b>Version</b></td>
+                  <td><xsl:value-of select="owl:versionInfo"/></td>
+                </tr>
+                <xsl:if test="rdfs:seeAlso">
+                  <tr>
+                    <td><b>See Also</b></td>
+                    <td>
+                      <xsl:for-each select="rdfs:seeAlso">
+                        <a>
+                          <xsl:attribute name="href">
+                            <xsl:value-of select="@rdf:resource"/>
+                          </xsl:attribute>
+                          <xsl:value-of select="@rdf:resource"/>
+                        </a>
+                        <xsl:if test="position() != last()">
+                          <xsl:text>, </xsl:text>
+                        </xsl:if>
+                      </xsl:for-each>
+                    </td>
+                  </tr>
+                </xsl:if>
+              </xsl:if>
+            </xsl:for-each>
 
             <xsl:if test="/rdf:RDF/rdf:Description[rdf:type/@rdf:resource='http://www.w3.org/2000/01/rdf-schema#Class']">
               <tr>
