@@ -86,14 +86,14 @@
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
-:ServerManagedTriples a rdfs:Resource ;
-    rdfs:label "server managed triples" ;
+:PreferServerManaged a rdfs:Resource ;
+    rdfs:label "prefer server managed" ;
     rdfs:comment "IRI identifying a LDPR's server-managed triples" ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
-:UserManagedTriples a rdfs:Resource ;
-    rdfs:label "user managed triples" ;
+:PreferUserManaged a rdfs:Resource ;
+    rdfs:label "prefer user managed" ;
     rdfs:comment "IRI identifying a LDP-RS's user-managed resource triples" ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
