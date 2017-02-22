@@ -11,7 +11,7 @@
     vann:preferredNamespaceUri "http://acdc.amherst.edu/ns/trellis#" ;
     vann:preferredNamespacePrefix "trellis" ;
     rdfs:label "Trellis Repository Ontology"@en ;
-    rdfs:comment "Trellis is an implementation of the Fedora API and the Linked Data Platform."@en ;
+    rdfs:comment "Trellis is an implementation of the Fedora API and the Linked Data Platform. This ontology defines Classes, Properties and IRIs that are used in Trellis."@en ;
     rdfs:seeAlso <http://fedora.info/spec/> , <http://www.w3.org/TR/ldp/> .
 
 # ------------

@@ -228,16 +228,25 @@ table {
   border-collapse: collapse;
 }
 h2 {
+  padding-top: 20px;
   text-align: center;
 }
 th {
   padding: 5px;
   background-color: #ddd;
+  border: 1px solid #ddd;
 }
 td {
-  padding: 1px 10px;
+  padding: 5px 10px;
   border: 1px solid #ddd;
 }
 pre {
   font-size: 16px;
+}
+.category td {
+    border: 0;
+}
+.preamble td {
+    border: 0;
+    height: 20px;
 }

@@ -22,7 +22,9 @@
         <title><xsl:value-of select="$title"/></title>
       </head>
       <body>
-        <header id="banner"></header>
+        <header id="banner">
+          <xsl:text> </xsl:text>
+        </header>
         <main>
           <table>
             <h1><xsl:value-of select="$title"/></h1>
@@ -44,17 +46,19 @@
                   <tr>
                     <td><b>See Also</b></td>
                     <td>
-                      <xsl:for-each select="rdfs:seeAlso">
-                        <a>
-                          <xsl:attribute name="href">
+                      <p>
+                        <xsl:for-each select="rdfs:seeAlso">
+                          <a>
+                            <xsl:attribute name="href">
+                              <xsl:value-of select="@rdf:resource"/>
+                            </xsl:attribute>
                             <xsl:value-of select="@rdf:resource"/>
-                          </xsl:attribute>
-                          <xsl:value-of select="@rdf:resource"/>
-                        </a>
-                        <xsl:if test="position() != last()">
-                          <xsl:text>, </xsl:text>
-                        </xsl:if>
-                      </xsl:for-each>
+                          </a>
+                          <xsl:if test="position() != last()">
+                            <xsl:text>, </xsl:text>
+                          </xsl:if>
+                        </xsl:for-each>
+                      </p>
                     </td>
                   </tr>
                 </xsl:if>
@@ -62,7 +66,7 @@
             </xsl:for-each>
 
             <xsl:if test="/rdf:RDF/rdf:Description[rdf:type/@rdf:resource='http://www.w3.org/2000/01/rdf-schema#Class']">
-              <tr>
+              <tr class="category">
                 <td colspan="2">
                   <h2>Classes</h2>
                 </td>
@@ -74,7 +78,7 @@
             </xsl:if>
 
             <xsl:if test="/rdf:RDF/rdf:Description[rdf:type/@rdf:resource='http://www.w3.org/1999/02/22-rdf-syntax-ns#Property']">
-              <tr>
+              <tr class="category">
                 <td colspan="2">
                   <h2>Properties</h2>
                 </td>
@@ -86,7 +90,7 @@
             </xsl:if>
 
             <xsl:if test="/rdf:RDF/rdf:Description[not(rdf:type/@rdf:resource='http://www.w3.org/2002/07/owl#Ontology' or rdf:type/@rdf:resource='http://www.w3.org/1999/02/22-rdf-syntax-ns#Property' or rdf:type/@rdf:resource='http://www.w3.org/2000/01/rdf-schema#Class')]">
-              <tr>
+              <tr class="category">
                 <td colspan="2">
                   <h2>Named Individuals</h2>
                 </td>
@@ -106,20 +110,25 @@
   </xsl:template>
 
   <xsl:template name="description">
+    <tr class="preamble">
+      <td colspan="2"><xsl:text> </xsl:text></td>
+    </tr>
     <tr>
       <th colspan="2">
-        <a>
-          <xsl:attribute name="href">
-            <xsl:value-of select="concat('#', substring-after(@rdf:about,$namespace))"/>
-          </xsl:attribute>
-          <xsl:attribute name="id">
-            <xsl:text>#</xsl:text>
+        <p>
+          <a>
+            <xsl:attribute name="href">
+              <xsl:text>#</xsl:text>
+              <xsl:value-of select="substring-after(@rdf:about,$namespace)"/>
+            </xsl:attribute>
+            <xsl:attribute name="id">
+              <xsl:value-of select="substring-after(@rdf:about,$namespace)"/>
+            </xsl:attribute>
+            <xsl:value-of select="$prefix"/>
+            <xsl:text>:</xsl:text>
             <xsl:value-of select="substring-after(@rdf:about,$namespace)"/>
-          </xsl:attribute>
-          <xsl:value-of select="$prefix"/>
-          <xsl:text>:</xsl:text>
-          <xsl:value-of select="substring-after(@rdf:about,$namespace)"/>
-        </a>
+          </a>
+        </p>
       </th>
     </tr>
     <tr>
@@ -138,12 +147,14 @@
       <tr>
         <td><b>Domain</b></td>
         <td>
-          <xsl:for-each select="rdfs:domain">
-            <xsl:call-template name="link"/>
-            <xsl:if test="position() != last()">
-              <xsl:text>, </xsl:text>
-            </xsl:if>
-          </xsl:for-each>
+          <p>
+            <xsl:for-each select="rdfs:domain">
+              <xsl:call-template name="link"/>
+              <xsl:if test="position() != last()">
+                <xsl:text>, </xsl:text>
+              </xsl:if>
+            </xsl:for-each>
+          </p>
         </td>
       </tr>
     </xsl:if>
