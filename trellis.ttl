@@ -8,9 +8,11 @@
 
 : a owl:Ontology ;
     owl:versionInfo "0.1" ;
-    vann:preferredNamespaceUri "http://acdc.amherst.edu/ns/trellis#";
-    vann:preferredNamespacePrefix "trellis";
-    rdfs:comment "Trellis Repository Ontology, Version 0.1"@en .
+    vann:preferredNamespaceUri "http://acdc.amherst.edu/ns/trellis#" ;
+    vann:preferredNamespacePrefix "trellis" ;
+    rdfs:label "Trellis Repository Ontology"@en ;
+    rdfs:comment "Trellis is an implementation of the Fedora API and the Linked Data Platform."@en ;
+    rdfs:seeAlso <http://fedora.info/spec/> , <http://www.w3.org/TR/ldp/> .
 
 # ------------
 #   Classes
