@@ -10,14 +10,14 @@
     owl:versionInfo "0.1" ;
     vann:preferredNamespaceUri "http://acdc.amherst.edu/ns/trellis#";
     vann:preferredNamespacePrefix "trellis";
-    rdfs:comment "Trellis Repository Ontology, Version 0.1" .
+    rdfs:comment "Trellis Repository Ontology, Version 0.1"@en .
 
 # ------------
 #   Classes
 # ------------
 :ConstraintViolation a rdfs:Class ;
-    rdfs:label "constraint violation" ;
-    rdfs:comment "A defined constraint was violated with the provided RDF graph" ;
+    rdfs:label "constraint violation"@en ;
+    rdfs:comment "A defined constraint was violated with the provided RDF graph"@en ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
@@ -26,8 +26,8 @@
 #   Properties
 # ---------------
 :containedBy a rdf:Property ;
-    rdfs:label "contained by" ;
-    rdfs:comment "Links a resource to the container resource that encloses it." ;
+    rdfs:label "contained by"@en ;
+    rdfs:comment "Links a resource to the container resource that encloses it."@en ;
     rdfs:domain ldp:Resource ;
     rdfs:range ldp:Container ;
     rdfs:isDefinedBy : ;
@@ -39,62 +39,62 @@
 #   Named Individuals
 # ----------------------
 :AccessViolation a :ConstraintViolation ;
-    rdfs:label "access violation" ;
-    rdfs:comment "The given operation (e.g. read, write, append) is not permitted to the provided user/group with regard to the specified resource(s)." ;
+    rdfs:label "access violation"@en ;
+    rdfs:comment "The given operation (e.g. read, write, append) is not permitted to the provided user/group with regard to the specified resource(s)."@en ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
 :DefaultInteractionModel a rdfs:Resource ;
-    rdfs:label "default interaction model" ;
-    rdfs:comment "In the absence of a Link header defining an LDP interaction model, the implementation default will be assigned to the new resource." ;
+    rdfs:label "default interaction model"@en ;
+    rdfs:comment "In the absence of a Link header defining an LDP interaction model, the implementation default will be assigned to the new resource."@en ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
 :InvalidInteractionModel a :ConstraintViolation ;
-    rdfs:label "invalid interaction model" ;
-    rdfs:comment "An invalid LDP interaction model was provided" ;
+    rdfs:label "invalid interaction model"@en ;
+    rdfs:comment "An invalid LDP interaction model was provided"@en ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
 :InvalidCardinality a :ConstraintViolation ;
-    rdfs:label "invalid cardinality" ;
-    rdfs:comment "For properties with cardinality restrictions, the supplied graph did not correspond to the defined rules regarding cardinality." ;
+    rdfs:label "invalid cardinality"@en ;
+    rdfs:comment "For properties with cardinality restrictions, the supplied graph did not correspond to the defined rules regarding cardinality."@en ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
 :InvalidProperty a :ConstraintViolation ;
-    rdfs:label "invalid property" ;
-    rdfs:comment "LDP interaction models permit certain valid properties; the supplied graph did not conform to the defined rules for an allowable property." ;
+    rdfs:label "invalid property"@en ;
+    rdfs:comment "LDP interaction models permit certain valid properties; the supplied graph did not conform to the defined rules for an allowable property."@en ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
 :InvalidRange a :ConstraintViolation ;
-    rdfs:label "invalid range" ;
-    rdfs:comment "For properties with range constraints (e.g. IRI or in-domain ranges), the supplied graph violated these constraints." ;
+    rdfs:label "invalid range"@en ;
+    rdfs:comment "For properties with range constraints (e.g. IRI or in-domain ranges), the supplied graph violated these constraints."@en ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
 :InvalidType a :ConstraintViolation ;
-    rdfs:label "invalid type" ;
-    rdfs:comment "An invalid rdf:type was included in the supplied graph, such as an invalid LDP resource type or a server-managed type." ;
+    rdfs:label "invalid type"@en ;
+    rdfs:comment "An invalid rdf:type was included in the supplied graph, such as an invalid LDP resource type or a server-managed type."@en ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
 :PreferAudit a rdfs:Resource ;
-    rdfs:label "prefer audit" ;
-    rdfs:comment "IRI identifying a LDPR's audit triples" ;
+    rdfs:label "prefer audit"@en ;
+    rdfs:comment "IRI identifying a LDPR's audit triples"@en ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
 :PreferServerManaged a rdfs:Resource ;
-    rdfs:label "prefer server managed" ;
-    rdfs:comment "IRI identifying a LDPR's server-managed triples" ;
+    rdfs:label "prefer server managed"@en ;
+    rdfs:comment "IRI identifying a LDPR's server-managed triples"@en ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
 :PreferUserManaged a rdfs:Resource ;
-    rdfs:label "prefer user managed" ;
-    rdfs:comment "IRI identifying a LDP-RS's user-managed resource triples" ;
+    rdfs:label "prefer user managed"@en ;
+    rdfs:comment "IRI identifying a LDP-RS's user-managed resource triples"@en ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
