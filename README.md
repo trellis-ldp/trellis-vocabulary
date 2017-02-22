@@ -1,4 +1,7 @@
 # trellis-ontology
+
+[![Build Status](https://travis-ci.org/trellis-ldp/trellis-ontology.png?branch=master)](https://travis-ci.org/trellis-ldp/trellis-ontology)
+
 Ontologies for the Trellis repository
 
 This repository includes
