@@ -6,7 +6,7 @@
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:vann="http://purl.org/vocab/vann/"
     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
-    exclude-result-prefixes="xsd rdf rdfs owl" version="1.0">
+    exclude-result-prefixes="xsd rdf rdfs owl vann vs" version="1.0">
   <xsl:output method="html" indent="yes" encoding="utf-8"/>
 
   <xsl:variable name="title" select="/rdf:RDF/rdf:Description[rdf:type/@rdf:resource='http://www.w3.org/2002/07/owl#Ontology']/rdfs:label"/>
