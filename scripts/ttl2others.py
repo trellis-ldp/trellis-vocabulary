@@ -57,7 +57,7 @@ if __name__ == '__main__':
     doc = etree.parse(basename + '.rdf')
     transform = etree.XSLT(etree.parse(args.xslt))
     with open(basename + '.html', 'wb') as f:
-        f.write(bytes("<!DOCTYPE html>\n", 'UTF-8'))
+        f.write("<!DOCTYPE html>\n".encode('UTF-8'))
         f.write(etree.tostring(transform(doc), pretty_print=True));
 
 
