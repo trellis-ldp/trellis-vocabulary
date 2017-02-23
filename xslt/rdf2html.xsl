@@ -14,7 +14,6 @@
   <xsl:variable name="prefix" select="/rdf:RDF/rdf:Description[rdf:type/@rdf:resource='http://www.w3.org/2002/07/owl#Ontology']/vann:preferredNamespacePrefix"/>
 
   <xsl:template match="/rdf:RDF">
-    <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
     <html lang="en">
       <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
