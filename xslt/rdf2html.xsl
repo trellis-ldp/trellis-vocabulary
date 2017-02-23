@@ -26,8 +26,8 @@
           <xsl:text> </xsl:text>
         </header>
         <main>
+          <h1><xsl:value-of select="$title"/></h1>
           <table>
-            <h1><xsl:value-of select="$title"/></h1>
             <xsl:for-each select="/rdf:RDF/rdf:Description[rdf:type/@rdf:resource='http://www.w3.org/2002/07/owl#Ontology']">
               <xsl:if test="position() = 1">
                 <tr>
