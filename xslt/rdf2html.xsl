@@ -102,7 +102,7 @@
           </table>
         </main>
         <footer>
-          <a href="https://amherst.edu">Amherst College</a> • 220 South Pleasant Street, Amherst, MA 01002 • (413) 542-2000 • <a href="https://www.amherst.edu">Amherst.edu</a>
+          <a href="https://www.amherst.edu">Amherst College</a> • 220 South Pleasant Street, Amherst, MA 01002 • (413) 542-2000 • <a href="https://www.amherst.edu">Amherst.edu</a>
         </footer>
       </body>
     </html>
