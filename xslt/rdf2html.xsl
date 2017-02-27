@@ -185,7 +185,7 @@
     </xsl:if>
     <xsl:if test="owl:inverseOf">
       <tr>
-`        <td><b>Inverse Of</b></td>
+        <td><b>Inverse Of</b></td>
         <td>
           <xsl:for-each select="owl:inverseOf">
             <xsl:call-template name="link"/>

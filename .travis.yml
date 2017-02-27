@@ -2,5 +2,8 @@ language: python
 python:
     - "2.7"
     - "3.4"
+before_script:
+    - flake8 .
 script:
     - python scripts/ttl2others.py trellis.ttl
+    - html5validator
