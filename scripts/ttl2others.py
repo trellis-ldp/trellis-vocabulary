@@ -1,6 +1,6 @@
 #
-# This will take a turtle formated RDF file and output
-# a RDF/XML and JSON-LD version of the file.
+# This will take a turtle formated RDF file and output a RDF/XML
+# and JSON-LD version of the file.
 # Requirements:
 #      pip3 install rdflib
 #      pip3 install rdflib-jsonld
@@ -17,23 +17,20 @@ import os
 
 if __name__ == "__main__":
 
-    parser = argparse.ArgumentParser(
-            description="Takes a turtle formated RDF file and" +
-            "creates a RDF/XML and JSON-LD version of it")
-    parser.add_argument("filename",
-                        help="Turtle formated RDF file to translate")
-    parser.add_argument("--xslt",
-                        help="The XSLT for generating an HTML document",
-                        default="xslt/rdf2html.xsl")
+    parser = argparse.ArgumentParser(description="""Takes a turtle formated RDF
+        file and creates a RDF/XML and JSON-LD version of it""")
+    parser.add_argument("filename", help="""Turtle formated RDF file to
+        translate""")
+    parser.add_argument("--xslt", default="xslt/rdf2html.xsl", help="""
+        The XSLT for generating an HTML document from RDF/XML""")
 
     args = parser.parse_args()
+
     graph = Graph()
 
     context = {
-        "ldp": "http://www.w3.org/ns/ldp#",
         "owl": "http://www.w3.org/2002/07/owl#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "trellis": "http://acdc.amherst.edu/ns/trellis#",
         "vann": "http://purl.org/vocab/vann/",
         "vs": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
 
@@ -54,6 +51,7 @@ if __name__ == "__main__":
     (basename, ext) = os.path.splitext(os.path.basename(args.filename))
 
     tgraph = graph.parse(location=args.filename, format="text/turtle")
+
     tgraph.serialize(basename + ".rdf", format="application/rdf+xml")
     tgraph.serialize(basename + ".jsonld", format="json-ld", indent=2,
                      context=context)
