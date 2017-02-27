@@ -10,3 +10,4 @@ before_script:
 
 script:
     - python scripts/ttl2others.py trellis.ttl
+    - html5validator
