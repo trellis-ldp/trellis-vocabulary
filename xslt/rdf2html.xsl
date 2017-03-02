@@ -35,7 +35,7 @@
                 </tr>
                 <tr>
                   <td><b>Description</b></td>
-                  <td><p><xsl:value-of select="rdfs:comment"/></p></td>
+                  <td><xsl:value-of select="rdfs:comment"/></td>
                 </tr>
                 <tr>
                   <td><b>Version</b></td>
@@ -45,19 +45,17 @@
                   <tr>
                     <td><b>See Also</b></td>
                     <td>
-                      <p>
-                        <xsl:for-each select="rdfs:seeAlso">
-                          <a>
-                            <xsl:attribute name="href">
-                              <xsl:value-of select="@rdf:resource"/>
-                            </xsl:attribute>
+                      <xsl:for-each select="rdfs:seeAlso">
+                        <a>
+                          <xsl:attribute name="href">
                             <xsl:value-of select="@rdf:resource"/>
-                          </a>
-                          <xsl:if test="position() != last()">
-                            <xsl:text>, </xsl:text>
-                          </xsl:if>
-                        </xsl:for-each>
-                      </p>
+                          </xsl:attribute>
+                          <xsl:value-of select="@rdf:resource"/>
+                        </a>
+                        <xsl:if test="position() != last()">
+                          <br/>
+                        </xsl:if>
+                      </xsl:for-each>
                     </td>
                   </tr>
                 </xsl:if>
@@ -149,7 +147,7 @@
           <xsl:for-each select="rdfs:domain">
             <xsl:call-template name="link"/>
             <xsl:if test="position() != last()">
-              <xsl:text>, </xsl:text>
+              <br/>
             </xsl:if>
           </xsl:for-each>
         </td>
@@ -162,7 +160,7 @@
           <xsl:for-each select="rdfs:range">
             <xsl:call-template name="link"/>
             <xsl:if test="position() != last()">
-              <xsl:text>, </xsl:text>
+              <br/>
             </xsl:if>
           </xsl:for-each>
         </td>
@@ -175,7 +173,7 @@
           <xsl:for-each select="rdf:type">
             <xsl:call-template name="link"/>
             <xsl:if test="position() != last()">
-              <xsl:text>, </xsl:text>
+              <br/>
             </xsl:if>
           </xsl:for-each>
         </td>
@@ -188,7 +186,7 @@
           <xsl:for-each select="owl:inverseOf">
             <xsl:call-template name="link"/>
             <xsl:if test="position() != last()">
-              <xsl:text>, </xsl:text>
+              <br/>
             </xsl:if>
           </xsl:for-each>
         </td>
