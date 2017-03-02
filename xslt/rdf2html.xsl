@@ -146,14 +146,12 @@
       <tr>
         <td><b>Domain</b></td>
         <td>
-          <p>
-            <xsl:for-each select="rdfs:domain">
-              <xsl:call-template name="link"/>
-              <xsl:if test="position() != last()">
-                <xsl:text>, </xsl:text>
-              </xsl:if>
-            </xsl:for-each>
-          </p>
+          <xsl:for-each select="rdfs:domain">
+            <xsl:call-template name="link"/>
+            <xsl:if test="position() != last()">
+              <xsl:text>, </xsl:text>
+            </xsl:if>
+          </xsl:for-each>
         </td>
       </tr>
     </xsl:if>
