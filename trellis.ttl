@@ -1,18 +1,18 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@prefix ldp: <http://www.w3.org/ns/ldp#> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix : <http://acdc.amherst.edu/ns/trellis#> .
 
 : a owl:Ontology ;
-    owl:versionInfo "0.1" ;
-    vann:preferredNamespaceUri "http://acdc.amherst.edu/ns/trellis#" ;
-    vann:preferredNamespacePrefix "trellis" ;
     rdfs:label "Trellis Repository Ontology"@en ;
     rdfs:comment "Trellis is an implementation of the Fedora API and the Linked Data Platform. This ontology defines Classes, Properties and IRIs that are used in Trellis."@en ;
-    rdfs:seeAlso <http://fedora.info/spec/> , <http://www.w3.org/TR/ldp/> .
+    rdfs:seeAlso <http://fedora.info/spec/> , <http://www.w3.org/TR/ldp/> ;
+    owl:versionInfo "0.1" ;
+    vann:preferredNamespaceUri "http://acdc.amherst.edu/ns/trellis#" ;
+    vann:preferredNamespacePrefix "trellis" .
 
 # ------------
 #   Classes
