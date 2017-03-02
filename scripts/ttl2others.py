@@ -42,6 +42,7 @@ if __name__ == "__main__":
         "isDefinedBy": {"@id": "rdfs:isDefinedBy", "@type": "@id"},
         "label": {"@id": "rdfs:label", "@language": "en"},
         "range": {"@id": "rdfs:range", "@type": "@id"},
+        "seeAlso": {"@id": "rdfs:seeAlso", "@type": "@id"},
         "versionInfo": {"@id": "owl:versionInfo"},
         "inverseOf": {"@id": "owl:inverseOf", "@type": "@id"},
         "preferredNamespacePrefix": {"@id": "vann:preferredNamespacePrefix"},
