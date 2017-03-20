@@ -52,6 +52,12 @@
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
+:DeletedResource a rdfs:Resource ;
+    rdfs:label "deleted resource"@en ;
+    rdfs:comment "A resource that has been removed from a repository."@en ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
+
 :InvalidInteractionModel a :ConstraintViolation ;
     rdfs:label "invalid interaction model"@en ;
     rdfs:comment "An invalid LDP interaction model was provided"@en ;
