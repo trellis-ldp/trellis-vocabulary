@@ -23,6 +23,12 @@
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
+:DeletedResource a rdfs:Class ;
+    rdfs:label "deleted resource"@en ;
+    rdfs:comment "A resource that has been removed from a repository."@en ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
+
 
 # ---------------
 #   Properties
@@ -49,12 +55,6 @@
 :DefaultInteractionModel a rdfs:Resource ;
     rdfs:label "default interaction model"@en ;
     rdfs:comment "In the absence of a Link header defining an LDP interaction model, the implementation default will be assigned to the new resource."@en ;
-    rdfs:isDefinedBy : ;
-    vs:term_status "working-draft" .
-
-:DeletedResource a rdfs:Resource ;
-    rdfs:label "deleted resource"@en ;
-    rdfs:comment "A resource that has been removed from a repository."@en ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
