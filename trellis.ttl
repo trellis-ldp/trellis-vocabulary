@@ -30,19 +30,6 @@
     vs:term_status "working-draft" .
 
 
-# ---------------
-#   Properties
-# ---------------
-:containedBy a rdf:Property ;
-    rdfs:label "contained by"@en ;
-    rdfs:comment "Links a resource to the container resource that encloses it."@en ;
-    rdfs:domain ldp:Resource ;
-    rdfs:range ldp:Container ;
-    rdfs:isDefinedBy : ;
-    owl:inverseOf ldp:contains ;
-    vs:term_status "working-draft" .
-
-
 # ----------------------
 #   Named Individuals
 # ----------------------
