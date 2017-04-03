@@ -75,6 +75,12 @@
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
+:ReadOnlyResource a :ConstraintViolation ;
+    rdfs:label "read only resource"@en ;
+    rdfs:comment "This resource is read-only. Any mutating operation (PUT, POST, PATCH, DELETE) will therefore fail."@en ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
+
 :PreferAudit a rdfs:Resource ;
     rdfs:label "prefer audit"@en ;
     rdfs:comment "IRI identifying a LDPR's audit triples"@en ;
