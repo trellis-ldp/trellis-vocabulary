@@ -6,7 +6,7 @@
     doap:license <http://www.apache.org/licenses/LICENSE-2.0> ;
     doap:homepage <https://github.com/trellis-ldp/trellis> ;
     doap:shortdesc "Trellis is a repository system for the management and dissemination of linked digital content" ;
-    doap:description "Trellis is a distributed, modular repository system for managing and disseminating digital content. It implements the Fedora and Linked Data Platform APIs." ;
+    doap:description "Trellis is a distributed, modular repository system for managing and disseminating digital content. It implements the Linked Data Platform" ;
     doap:wiki <https://github.com/trellis-ldp/trellis/wiki> ;
     doap:programming-language "Java" , "Clojure" ;
     doap:repository
@@ -65,11 +65,6 @@
             foaf:homepage <https://www.amherst.edu> ;
             foaf:name "Amherst College" ] ] ;
     asfext:implements
-        [ a asfext:Standard ;
-            asfext:title "Fedora API" ;
-            asfext:body "The Fedora API Specification" ;
-            asfext:id "fedora-api" ;
-            asfext:url <http://fedora.info/spec/> ] ,
         [ a asfext:Standard ;
             asfext:title "Linked Data Platform" ;
             asfext:body "The W3C Linked Data Platform" ;
