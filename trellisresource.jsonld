@@ -10,7 +10,6 @@
         "format" : "dc:format",
         "size" : { "@id" : "dc:extent" , "@type" : "xsd:long" } ,
         "datastream" : { "@id" : "dc:hasPart" , "@type" : "@id" } ,
-        "created" : { "@id" : "dc:created", "@type" : "xsd:dateTime" } ,
         "modified" : { "@id" : "dc:modified", "@type" : "xsd:dateTime" } ,
         "creator" : { "@id" : "dc:creator", "@type" : "@id" } ,
         "type" : { "@id" : "dc:type", "@type" : "@id" }
