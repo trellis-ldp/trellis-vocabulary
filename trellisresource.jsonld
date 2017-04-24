@@ -11,7 +11,6 @@
         "size" : { "@id" : "dc:extent" , "@type" : "xsd:long" } ,
         "datastream" : { "@id" : "dc:hasPart" , "@type" : "@id" } ,
         "modified" : { "@id" : "dc:modified", "@type" : "xsd:dateTime" } ,
-        "creator" : { "@id" : "dc:creator", "@type" : "@id" } ,
         "type" : { "@id" : "dc:type", "@type" : "@id" }
     }
 }
