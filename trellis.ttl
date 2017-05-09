@@ -4,14 +4,14 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix : <http://acdc.amherst.edu/ns/trellis#> .
+@prefix : <http://www.trellisldp.org/ns/trellis#> .
 
 : a owl:Ontology ;
     rdfs:label "Trellis Repository Ontology"@en ;
     rdfs:comment "Trellis is an implementation of the Linked Data Platform. This ontology defines Classes, Properties and IRIs that are used in Trellis."@en ;
     rdfs:seeAlso <http://www.w3.org/TR/ldp/> ;
     owl:versionInfo "0.1" ;
-    vann:preferredNamespaceUri "http://acdc.amherst.edu/ns/trellis#" ;
+    vann:preferredNamespaceUri "http://www.trellisldp.org/ns/trellis#" ;
     vann:preferredNamespacePrefix "trellis" .
 
 # ------------

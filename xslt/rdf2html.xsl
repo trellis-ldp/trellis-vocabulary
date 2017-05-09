@@ -22,10 +22,9 @@
       </head>
       <body>
         <header id="banner">
-          <xsl:text> </xsl:text>
+          <h1><xsl:value-of select="$title"/></h1>
         </header>
         <main>
-          <h1><xsl:value-of select="$title"/></h1>
           <table>
             <xsl:for-each select="/rdf:RDF/rdf:Description[rdf:type/@rdf:resource='http://www.w3.org/2002/07/owl#Ontology']">
               <xsl:if test="position() = 1">
@@ -100,7 +99,7 @@
           </table>
         </main>
         <footer>
-          <a href="https://www.amherst.edu">Amherst College</a> • 220 South Pleasant Street, Amherst, MA 01002 • (413) 542-2000 • <a href="https://www.amherst.edu">Amherst.edu</a>
+            <a href="http://www.trellisldp.org">Trellis LDP</a>
         </footer>
       </body>
     </html>
