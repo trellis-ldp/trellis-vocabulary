@@ -7,8 +7,8 @@
 @prefix : <http://www.trellisldp.org/ns/trellis#> .
 
 : a owl:Ontology ;
-    rdfs:label "Trellis Repository Ontology"@en ;
-    rdfs:comment "Trellis is an implementation of the Linked Data Platform. This ontology defines Classes, Properties and IRIs that are used in Trellis."@en ;
+    rdfs:label "Trellis Repository Vocabulary"@en ;
+    rdfs:comment "Trellis is an implementation of the Linked Data Platform. This vocabulary defines Classes, Properties and IRIs that are used in Trellis."@en ;
     rdfs:seeAlso <http://www.w3.org/TR/ldp/> ;
     owl:versionInfo "0.1" ;
     vann:preferredNamespaceUri "http://www.trellisldp.org/ns/trellis#" ;
