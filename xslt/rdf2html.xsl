@@ -23,7 +23,7 @@
       </head>
       <body>
         <header id="banner">
-            <h1><img src="/img/trellis_white.png"/> <xsl:value-of select="$title"/></h1>
+            <h1><img src="/img/trellis_white.png" alt="trellis logo"/> <xsl:value-of select="$title"/></h1>
         </header>
         <main>
           <table>
