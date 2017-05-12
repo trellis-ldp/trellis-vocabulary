@@ -3,6 +3,7 @@
         "dc" : "http://purl.org/dc/terms/" ,
         "ldp" : "http://www.w3.org/ns/ldp#" ,
         "acl" : "http://www.w3.org/ns/auth/acl#" ,
+        "oa" : "http://www.w3.org/ns/oa#" ,
         "xsd" : "http://www.w3.org/2001/XMLSchema#" ,
 
         "accessControl" : { "@id" : "acl:accessControl", "@type" : "@id" } ,
@@ -11,6 +12,11 @@
         "size" : { "@id" : "dc:extent" , "@type" : "xsd:long" } ,
         "datastream" : { "@id" : "dc:hasPart" , "@type" : "@id" } ,
         "modified" : { "@id" : "dc:modified", "@type" : "xsd:dateTime" } ,
+        "annotationService" : { "@id" : "oa:annotationService" , "@type" : "@id" } ,
+        "membershipResource" : { "@id" : "ldp:membershipResource", "@type" : "@id" } ,
+        "hasMemberRelation" : { "@id" : "ldp:hasMemberRelation", "@type" : "@id" } ,
+        "isMemberOfRelation" : { "@id" : "ldp:isMemberOfRelation", "@type" : "@id" } ,
+        "insertedContentRelation" : { "@id" : "ldp:insertedContentRelation", "@type" : "@id" } ,
         "type" : { "@id" : "dc:type", "@type" : "@id" }
     }
 }
