@@ -3,6 +3,7 @@
 @prefix ldp: <http://www.w3.org/ns/ldp#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix : <http://www.trellisldp.org/ns/trellis#> .
 
@@ -38,6 +39,12 @@
     rdfs:comment "The given operation (e.g. read, write, append) is not permitted to the provided user/group with regard to the specified resource(s)."@en ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
+
+:AnonymousUser a vcard:Agent ;
+    rdfs:label "anonymous user"@en ;
+    rdfs:comment "An agent representing an anonymous user"@en ;
+    rdfs:isDefinedBy : ;
+    vs:terms_status "working-draft" .
 
 :DefaultInteractionModel a rdfs:Resource ;
     rdfs:label "default interaction model"@en ;
@@ -96,6 +103,12 @@
 :PreferUserManaged a rdfs:Resource ;
     rdfs:label "prefer user managed"@en ;
     rdfs:comment "IRI identifying a LDP-RS's user-managed resource triples"@en ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
+
+:RepositoryAdministrator a vcard:Agent ;
+    rdfs:label "repository administrator"@en ;
+    rdfs:comment "An agent representing a repository administrator"@en ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
