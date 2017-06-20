@@ -64,6 +64,12 @@
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
+:InvalidPayloadSize a :ConstraintViolation ;
+    rdfs:label "invalid payload size"@en ;
+    rdfs:comment "The supplied HTTP payload was invalid, being either too large or too small."@en ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
+
 :InvalidProperty a :ConstraintViolation ;
     rdfs:label "invalid property"@en ;
     rdfs:comment "LDP interaction models permit certain valid properties; the supplied graph did not conform to the defined rules for an allowable property."@en ;
