@@ -94,6 +94,12 @@
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
+:PreferAccessControl a rdfs:Resource ;
+    rdfs:label "prefer access control"@en ;
+    rdfs:comment "IRI identifying a LDPR's access control triples"@en ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
+
 :PreferAudit a rdfs:Resource ;
     rdfs:label "prefer audit"@en ;
     rdfs:comment "IRI identifying a LDPR's audit triples"@en ;
