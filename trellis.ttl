@@ -30,6 +30,20 @@
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
+:BinaryUploadService a rdfs:Class ;
+    rdfs:label "binary upload service"@en ;
+    rdfs:comment "An HTTP addressable resource whose interaction model supports multipart uploads of large files"@en ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
+
+# --------------
+#   Properties
+# --------------
+:multipartUploadService a rdf:Property ;
+    rdfs:label "multipart upload service"@en ;
+    rdfs:comment "Used to indicate the location of a multipart upload service. This relationship is intended to be used as the rel type of a Link, via HTTP Link Headers rfc5988."@en ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
 
 # ----------------------
 #   Named Individuals
