@@ -48,12 +48,6 @@
 # ----------------------
 #   Named Individuals
 # ----------------------
-:AccessViolation a :ConstraintViolation ;
-    rdfs:label "access violation"@en ;
-    rdfs:comment "The given operation (e.g. read, write, append) is not permitted to the provided user/group with regard to the specified resource(s)."@en ;
-    rdfs:isDefinedBy : ;
-    vs:term_status "working-draft" .
-
 :AnonymousUser a vcard:Agent ;
     rdfs:label "anonymous user"@en ;
     rdfs:comment "An agent representing an anonymous user"@en ;
@@ -66,21 +60,9 @@
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
-:InvalidInteractionModel a :ConstraintViolation ;
-    rdfs:label "invalid interaction model"@en ;
-    rdfs:comment "An invalid LDP interaction model was provided"@en ;
-    rdfs:isDefinedBy : ;
-    vs:term_status "working-draft" .
-
 :InvalidCardinality a :ConstraintViolation ;
     rdfs:label "invalid cardinality"@en ;
     rdfs:comment "For properties with cardinality restrictions, the supplied graph did not correspond to the defined rules regarding cardinality."@en ;
-    rdfs:isDefinedBy : ;
-    vs:term_status "working-draft" .
-
-:InvalidPayloadSize a :ConstraintViolation ;
-    rdfs:label "invalid payload size"@en ;
-    rdfs:comment "The supplied HTTP payload was invalid, being either too large or too small."@en ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
