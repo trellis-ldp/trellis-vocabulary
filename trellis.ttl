@@ -114,9 +114,3 @@
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
-:UnsupportedRecursiveDelete a :ConstraintViolation ;
-    rdfs:label "unsupported recursive delete"@en ;
-    rdfs:comment "The resource cannot be deleted because it contains child resources"@en ;
-    rdfs:isDefinedBy : ;
-    vs:term_status "working-draft" .
-
