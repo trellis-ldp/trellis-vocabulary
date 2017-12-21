@@ -8,7 +8,7 @@
 @prefix : <http://www.trellisldp.org/ns/trellis#> .
 
 : a owl:Ontology ;
-    rdfs:label "Trellis Repository Vocabulary"@en ;
+    rdfs:label "Trellis Linked Data Server Vocabulary"@en ;
     rdfs:comment "Trellis is an implementation of the Linked Data Platform. This vocabulary defines Classes, Properties and IRIs that are used in Trellis."@en ;
     rdfs:seeAlso <http://www.w3.org/TR/ldp/> ;
     owl:versionInfo "0.1" ;
@@ -26,7 +26,7 @@
 
 :DeletedResource a rdfs:Class ;
     rdfs:label "deleted resource"@en ;
-    rdfs:comment "A resource that has been removed from a repository."@en ;
+    rdfs:comment "A resource that has been removed from a server."@en ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
@@ -48,8 +48,14 @@
 # ----------------------
 #   Named Individuals
 # ----------------------
-:AnonymousUser a vcard:Agent ;
-    rdfs:label "anonymous user"@en ;
+:AdministratorAgent a vcard:Agent ;
+    rdfs:label "administrator agent"@en ;
+    rdfs:comment "An agent representing an administrator"@en ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
+
+:AnonymousAgent a vcard:Agent ;
+    rdfs:label "anonymous agent"@en ;
     rdfs:comment "An agent representing an anonymous user"@en ;
     rdfs:isDefinedBy : ;
     vs:terms_status "working-draft" .
@@ -108,9 +114,4 @@
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
-:RepositoryAdministrator a vcard:Agent ;
-    rdfs:label "repository administrator"@en ;
-    rdfs:comment "An agent representing a repository administrator"@en ;
-    rdfs:isDefinedBy : ;
-    vs:term_status "working-draft" .
 
