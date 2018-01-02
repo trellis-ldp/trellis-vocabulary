@@ -16,20 +16,8 @@
         [ a doap:GitRepository ;
             doap:location <https://github.com/trellis-ldp/trellis-rosid.git> ;
             doap:browse <https://github.com/trellis-ldp/trellis-rosid> ] ;
-    doap:maintainer [ a foaf:Person ;
-        foaf:name "Aaron Coburn" ;
-        foaf:mbox "acoburn @ (domain of organization URL)" ;
-        foaf:homepage <https://acoburn.people.amherst.edu/> ;
-        foaf:member [ a foaf:Organization ;
-            foaf:homepage <https://www.amherst.edu> ;
-            foaf:name "Amherst College" ] ] ;
-    doap:developer [ a foaf:Person ;
-        foaf:name "Aaron Coburn" ;
-        foaf:mbox "acoburn @ (domain of organization URL)" ;
-        foaf:homepage <https://acoburn.people.amherst.edu/> ;
-        foaf:member [ a foaf:Organization ;
-            foaf:homepage <https://www.amherst.edu> ;
-            foaf:name "Amherst College" ] ] ;
+    doap:maintainer <https://acoburn.people.amherst.edu/#i> ;
+    doap:developer <https://acoburn.people.amherst.edu/#i> ;
     asfext:implements
         [ a asfext:Standard ;
             asfext:title "Linked Data Platform" ;
