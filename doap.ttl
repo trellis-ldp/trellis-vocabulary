@@ -2,65 +2,31 @@
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
-<http://www.trellisldp.org/> a doap:Project ;
+<https://www.trellisldp.org/> a doap:Project ;
     doap:license <http://www.apache.org/licenses/LICENSE-2.0> ;
-    doap:homepage <http://www.trellisldp.org/> ;
-    doap:shortdesc "Trellis is a repository system for the management and dissemination of linked digital content" ;
-    doap:description "Trellis is a distributed, modular repository system for managing and disseminating digital content. It implements the Linked Data Platform" ;
+    doap:homepage <https://www.trellisldp.org/> ;
+    doap:shortdesc "Trellis is a linked data server" ;
+    doap:description "Trellis is a modular linked data server that can be used for managing and disseminating digital content. It implements the Linked Data Platform" ;
     doap:wiki <https://github.com/trellis-ldp/trellis/wiki> ;
-    doap:programming-language "Java" , "Clojure" ;
+    doap:programming-language "Java" ;
     doap:repository
         [ a doap:GitRepository ;
-            doap:location <https://github.com/trellis-ldp/trellis-api.git> ;
-            doap:browse <https://github.com/trellis-ldp/trellis-api> ] ,
-        [ a doap:GitRepository ;
-            doap:location <https://github.com/trellis-ldp/trellis-spi.git> ;
-            doap:browse <https://github.com/trellis-ldp/trellis-spi> ] ,
-        [ a doap:GitRepository ;
-            doap:location <https://github.com/trellis-ldp/trellis-vocabulary.git> ;
-            doap:browse <https://github.com/trellis-ldp/trellis-vocabulary> ] ,
-        [ a doap:GitRepository ;
-            doap:location <https://github.com/trellis-ldp/trellis-ontology.git> ;
-            doap:browse <https://github.com/trellis-ldp/trellis-ontology> ] ,
-        [ a doap:GitRepository ;
-            doap:location <https://github.com/trellis-ldp/trellis-agent.git> ;
-            doap:browse <https://github.com/trellis-ldp/trellis-agent> ] ,
-        [ a doap:GitRepository ;
-            doap:location <https://github.com/trellis-ldp/trellis-amqp.git> ;
-            doap:browse <https://github.com/trellis-ldp/trellis-amqp> ] ,
-        [ a doap:GitRepository ;
-            doap:location <https://github.com/trellis-ldp/trellis-constraint-rules.git> ;
-            doap:browse <https://github.com/trellis-ldp/trellis-constraint-rules> ] ,
-        [ a doap:GitRepository ;
-            doap:location <https://github.com/trellis-ldp/trellis-datastream.git> ;
-            doap:browse <https://github.com/trellis-ldp/trellis-datastream> ] ,
-        [ a doap:GitRepository ;
-            doap:location <https://github.com/trellis-ldp/trellis-id.git> ;
-            doap:browse <https://github.com/trellis-ldp/trellis-id> ] ,
-        [ a doap:GitRepository ;
-            doap:location <https://github.com/trellis-ldp/trellis-io-jena.git> ;
-            doap:browse <https://github.com/trellis-ldp/trellis-io-jena> ] ,
-        [ a doap:GitRepository ;
-            doap:location <https://github.com/trellis-ldp/trellis-jms.git> ;
-            doap:browse <https://github.com/trellis-ldp/trellis-jms> ] ,
-        [ a doap:GitRepository ;
-            doap:location <https://github.com/trellis-ldp/trellis-namespaces.git> ;
-            doap:browse <https://github.com/trellis-ldp/trellis-namespaces> ] ,
+            doap:location <https://github.com/trellis-ldp/trellis.git> ;
+            doap:browse <https://github.com/trellis-ldp/trellis> ] ,
         [ a doap:GitRepository ;
             doap:location <https://github.com/trellis-ldp/trellis-rosid.git> ;
-            doap:browse <https://github.com/trellis-ldp/trellis-rosid> ] ,
-        [ a doap:GitRepository ;
-            doap:location <https://github.com/trellis-ldp/trellis-webac.git> ;
-            doap:browse <https://github.com/trellis-ldp/trellis-webac> ] ;
+            doap:browse <https://github.com/trellis-ldp/trellis-rosid> ] ;
     doap:maintainer [ a foaf:Person ;
         foaf:name "Aaron Coburn" ;
         foaf:mbox "acoburn @ (domain of organization URL)" ;
+        foaf:homepage <https://acoburn.people.amherst.edu/> ;
         foaf:member [ a foaf:Organization ;
             foaf:homepage <https://www.amherst.edu> ;
             foaf:name "Amherst College" ] ] ;
     doap:developer [ a foaf:Person ;
         foaf:name "Aaron Coburn" ;
         foaf:mbox "acoburn @ (domain of organization URL)" ;
+        foaf:homepage <https://acoburn.people.amherst.edu/> ;
         foaf:member [ a foaf:Organization ;
             foaf:homepage <https://www.amherst.edu> ;
             foaf:name "Amherst College" ] ] ;
@@ -69,4 +35,24 @@
             asfext:title "Linked Data Platform" ;
             asfext:body "The W3C Linked Data Platform" ;
             asfext:id "ldp" ;
-            asfext:url <https://www.w3.org/TR/ldp/> ] .
+            asfext:url <https://www.w3.org/TR/ldp/> ] ,
+        [ a asfext:Standard ;
+            asfext:title "Activity Streams" ;
+            asfext:body "W3C Activity Streams 2.0" ;
+            asfext:id "as" ;
+            asfext:url <https://www.w3.org/TR/activitystreams-core/> ] ,
+        [ a asfext:Standard ;
+            asfext:title "Memento" ;
+            asfext:body "RFC 7089: HTTP Framework for Time-Based Access to Resource States" ;
+            asfext:id "memento" ;
+            asfext:url <https://tools.ietf.org/html/rfc7089> ] ,
+        [ a asfext:Standard ;
+            asfext:title "Instance Digests" ;
+            asfext:body "RFC 3230: Instance Digests in HTTP" ;
+            asfext:id "digest" ;
+            asfext:url <https://tools.ietf.org/html/rfc3230> ] ,
+        [ a asfext:Standard ;
+            asfext:title "Web Access Control" ;
+            asfext:body "SOLID WebAC: Authorization and Access Control" ;
+            asfext:id "webac" ;
+            asfext:url <https://github.com/solid/solid-spec#authorization-and-access-control> ] .
