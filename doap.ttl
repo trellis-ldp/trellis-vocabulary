@@ -5,7 +5,7 @@
 <https://www.trellisldp.org/> a doap:Project ;
     doap:license <http://www.apache.org/licenses/LICENSE-2.0> ;
     doap:homepage <https://www.trellisldp.org/> ;
-    doap:shortdesc "Trellis is a linked data server" ;
+    doap:name "Trellis LDP" ;
     doap:description "Trellis is a modular linked data server that can be used for managing and disseminating digital content. It implements the Linked Data Platform" ;
     doap:wiki <https://github.com/trellis-ldp/trellis/wiki> ;
     doap:programming-language "Java" ;
