@@ -1,6 +1,6 @@
-@prefix asfext: <http://projects.apache.org/ns/asfext#> .
+@prefix dc: <http://purl.org/dc/terms/> .
 @prefix doap: <http://usefulinc.com/ns/doap#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <https://www.trellisldp.org/> a doap:Project ;
     doap:license <http://www.apache.org/licenses/LICENSE-2.0> ;
@@ -18,29 +18,29 @@
             doap:browse <https://github.com/trellis-ldp/trellis-rosid> ] ;
     doap:maintainer <https://acoburn.people.amherst.edu/#i> ;
     doap:developer <https://acoburn.people.amherst.edu/#i> ;
-    asfext:implements
-        [ a asfext:Standard ;
-            asfext:title "Linked Data Platform" ;
-            asfext:body "The W3C Linked Data Platform" ;
-            asfext:id "ldp" ;
-            asfext:url <https://www.w3.org/TR/ldp/> ] ,
-        [ a asfext:Standard ;
-            asfext:title "Activity Streams" ;
-            asfext:body "W3C Activity Streams 2.0" ;
-            asfext:id "as" ;
-            asfext:url <https://www.w3.org/TR/activitystreams-core/> ] ,
-        [ a asfext:Standard ;
-            asfext:title "Memento" ;
-            asfext:body "RFC 7089: HTTP Framework for Time-Based Access to Resource States" ;
-            asfext:id "memento" ;
-            asfext:url <https://tools.ietf.org/html/rfc7089> ] ,
-        [ a asfext:Standard ;
-            asfext:title "Instance Digests" ;
-            asfext:body "RFC 3230: Instance Digests in HTTP" ;
-            asfext:id "digest" ;
-            asfext:url <https://tools.ietf.org/html/rfc3230> ] ,
-        [ a asfext:Standard ;
-            asfext:title "Web Access Control" ;
-            asfext:body "SOLID WebAC: Authorization and Access Control" ;
-            asfext:id "webac" ;
-            asfext:url <https://github.com/solid/solid-spec#authorization-and-access-control> ] .
+    doap:implements
+        [ a doap:Specification ;
+            doap:name "Linked Data Platform" ;
+            doap:description "The W3C Linked Data Platform" ;
+            dc:identifier "ldp" ;
+            rdfs:seeAlso <https://www.w3.org/TR/ldp/> ] ,
+        [ a doap:Specification ;
+            doap:name "Activity Streams" ;
+            doap:description "W3C Activity Streams 2.0" ;
+            dc:identifier "as" ;
+            rdfs:seeAlso <https://www.w3.org/TR/activitystreams-core/> ] ,
+        [ a doap:Specification ;
+            doap:name "Memento" ;
+            doap:description "RFC 7089: HTTP Framework for Time-Based Access to Resource States" ;
+            dc:identifier "memento" ;
+            rdfs:seeAlso <https://tools.ietf.org/html/rfc7089> ] ,
+        [ a doap:Specification ;
+            doap:name "Instance Digests" ;
+            doap:description "RFC 3230: Instance Digests in HTTP" ;
+            dc:identifier "digest" ;
+            rdfs:seeAlso <https://tools.ietf.org/html/rfc3230> ] ,
+        [ a doap:Specification ;
+            doap:name "Web Access Control" ;
+            doap:description "SOLID WebAC: Authorization and Access Control" ;
+            dc:identifier "webac" ;
+            rdfs:seeAlso <https://github.com/solid/solid-spec#authorization-and-access-control> ] .
