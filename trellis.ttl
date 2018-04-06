@@ -66,6 +66,12 @@
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
+:InvalidInteractionModel a :ConstraintViolation ;
+    rdfs:label "invalid interaction model"@en ;
+    rdfs:comment "The supplied interaction model is not supported by the server."@en ;
+    rdfs:isDefinedBy : ;
+    vs:terms_stability "working-draft" .
+
 :InvalidProperty a :ConstraintViolation ;
     rdfs:label "invalid property"@en ;
     rdfs:comment "LDP interaction models permit certain valid properties; the supplied graph did not conform to the defined rules for an allowable property."@en ;
