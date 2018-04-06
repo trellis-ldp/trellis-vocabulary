@@ -5,7 +5,6 @@ import boto3
 from botocore.exceptions import ClientError
 
 LOGGER = logging.getLogger('trellis')
-LOGGER.setLevel(logging.INFO)
 
 
 class Uploader:
@@ -28,11 +27,14 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(
             description="Upload ontology files to S3")
-    parser.add_argument("--bucket", help="The bucket name")
+    parser.add_argument("--bucket", required=True, help="The bucket name")
     parser.add_argument("--profile", default="default",
                         help="The credentials profile")
 
     args = parser.parse_args()
+
+    LOGGER.setLevel(logging.INFO)
+    LOGGER.addHandler(logging.StreamHandler())
 
     uploader = Uploader(bucket=args.bucket, profile=args.profile)
 
