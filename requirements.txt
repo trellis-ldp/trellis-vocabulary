@@ -1,5 +1,6 @@
 html5validator
 flake8
+boto3
 rdflib
 rdflib-jsonld
 lxml
