@@ -38,7 +38,6 @@ if __name__ == '__main__':
 
     uploader = Uploader(bucket=args.bucket, profile=args.profile)
 
-    uploader.upload("doap.ttl", "doap.ttl", "text/turtle")
     uploader.upload("trellis.ttl", "ns/trellis.ttl", "text/turtle")
     uploader.upload("trellis.html", "ns/trellis.html", "text/html")
     uploader.upload("trellis.jsonld", "ns/trellis.jsonld",
