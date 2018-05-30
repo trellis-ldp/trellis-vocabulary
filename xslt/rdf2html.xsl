@@ -18,12 +18,12 @@
       <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-        <link rel="icon" href="/img/trellis.png"/>
+        <link rel="icon" href="img/trellis.png"/>
         <title><xsl:value-of select="$title"/></title>
       </head>
       <body>
         <header id="banner">
-            <h1><img src="/img/trellis_white.png" alt="trellis logo"/> <xsl:value-of select="$title"/></h1>
+            <h1><img src="img/trellis_white.png" alt="trellis logo"/> <xsl:value-of select="$title"/></h1>
         </header>
         <main>
           <table>
