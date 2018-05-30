@@ -47,4 +47,5 @@ if __name__ == '__main__':
                     "application/ld+json")
     uploader.upload("css/style.css", "ns/css/style.css", "text/css")
     uploader.upload("img/trellis.png", "ns/img/trellis.png", "image/png")
-    uploader.upload("img/trellis_white.png", "ns/img/trellis_white.png", "image/png")
+    uploader.upload("img/trellis_white.png", "ns/img/trellis_white.png",
+                    "image/png")
