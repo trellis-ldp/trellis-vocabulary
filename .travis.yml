@@ -1,7 +1,5 @@
 language: python
-python:
-    - "2.7"
-    - "3.6"
+
 before_script:
     - flake8 .
     - sudo apt-get update
@@ -12,12 +10,29 @@ script:
     - python scripts/ttl2others.py trellis.ttl
     - html5validator
 
-deploy:
-  provider: s3
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
-  bucket: $AWS_BUCKET
-  skip_cleanup: true
-  local_dir: ns
-  upload-dir: ns
-  default_text_charset: 'utf-8'
+stages:
+  - test
+  - deploy
+
+jobs:
+  include:
+    - name: "Python 2"
+      stage: test
+      python: 2.7
+
+    - name: "Python 3"
+      stage: test
+      python: 3.6
+
+    - name: "Deploy to AWS"
+      stage: deploy
+      python: 3.6
+      deploy:
+        provider: s3
+        access_key_id: $AWS_ACCESS_KEY
+        secret_access_key: $AWS_SECRET_KEY
+        bucket: $AWS_BUCKET
+        skip_cleanup: true
+        local_dir: ns
+        upload-dir: ns
+        default_text_charset: 'utf-8'
