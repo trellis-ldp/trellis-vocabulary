@@ -54,7 +54,6 @@ if __name__ == "__main__":
 
     tgraph = graph.parse(location=args.filename, format="text/turtle")
 
-    shutil.copyfile(args.filename, "ns/" + basename + ".ttl")
     tgraph.serialize("ns/" + basename + ".rdf", format="application/rdf+xml")
     tgraph.serialize("ns/" + basename + ".json", format="json-ld", indent=2,
                      context=context)
@@ -64,3 +63,5 @@ if __name__ == "__main__":
     with open("ns/" + basename + ".html", "wb") as f:
         f.write("<!DOCTYPE html>\n".encode("UTF-8"))
         f.write(etree.tostring(transform(doc), pretty_print=True))
+
+    shutil.copyfile(args.filename, "ns/" + basename + ".ttl")
