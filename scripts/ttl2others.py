@@ -13,6 +13,7 @@ from lxml import etree
 
 import argparse
 import os
+import shutil
 
 
 if __name__ == "__main__":
@@ -53,12 +54,13 @@ if __name__ == "__main__":
 
     tgraph = graph.parse(location=args.filename, format="text/turtle")
 
-    tgraph.serialize(basename + ".rdf", format="application/rdf+xml")
-    tgraph.serialize(basename + ".jsonld", format="json-ld", indent=2,
+    shutil.copyfile(args.filename, "ns/" + basename + ".ttl")
+    tgraph.serialize("ns/" + basename + ".rdf", format="application/rdf+xml")
+    tgraph.serialize("ns/" + basename + ".jsonld", format="json-ld", indent=2,
                      context=context)
 
-    doc = etree.parse(basename + ".rdf")
+    doc = etree.parse("ns/" + basename + ".rdf")
     transform = etree.XSLT(etree.parse(args.xslt))
-    with open(basename + ".html", "wb") as f:
+    with open("ns/" + basename + ".html", "wb") as f:
         f.write("<!DOCTYPE html>\n".encode("UTF-8"))
         f.write(etree.tostring(transform(doc), pretty_print=True))
