@@ -36,5 +36,5 @@ jobs:
         bucket: $AWS_BUCKET
         skip_cleanup: true
         local_dir: ns
-        upload-dir: ns
+        upload_dir: ns
         default_text_charset: 'utf-8'
