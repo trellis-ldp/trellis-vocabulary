@@ -56,7 +56,7 @@ if __name__ == "__main__":
 
     shutil.copyfile(args.filename, "ns/" + basename + ".ttl")
     tgraph.serialize("ns/" + basename + ".rdf", format="application/rdf+xml")
-    tgraph.serialize("ns/" + basename + ".jsonld", format="json-ld", indent=2,
+    tgraph.serialize("ns/" + basename + ".json", format="json-ld", indent=2,
                      context=context)
 
     doc = etree.parse("ns/" + basename + ".rdf")
