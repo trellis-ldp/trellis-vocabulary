@@ -1,16 +1,6 @@
 language: python
 
-before_script:
-    - flake8 .
-    - sudo apt-get update
-    - sudo apt-get install oracle-java8-installer
-    - sudo update-java-alternatives -s java-8-oracle
-
 cache: pip
-
-script:
-    - python scripts/ttl2others.py trellis.ttl
-    - html5validator
 
 stages:
   - test
@@ -18,17 +8,37 @@ stages:
 
 jobs:
   include:
+    # Test with Python 2
     - name: "Python 2"
       stage: test
       python: 2.7
+      before_script:
+        - flake8 .
+        - sudo apt-get update
+        - sudo apt-get install oracle-java8-installer
+        - sudo update-java-alternatives -s java-8-oracle
+      script:
+        - python scripts/ttl2others.py trellis.ttl
+        - html5validator
 
+    # Test with Python 3
     - name: "Python 3"
       stage: test
       python: 3.6
+      before_script:
+        - flake8 .
+        - sudo apt-get update
+        - sudo apt-get install oracle-java8-installer
+        - sudo update-java-alternatives -s java-8-oracle
+      script:
+        - python3 scripts/ttl2others.py trellis.ttl
+        - html5validator
 
+    # AWS deployment
     - name: "Deploy to AWS"
       stage: deploy
       python: 3.6
+      script: python3 scripts/ttl2others.py trellis.ttl
       deploy:
         provider: s3
         access_key_id: $AWS_ACCESS_KEY
