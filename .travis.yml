@@ -15,8 +15,7 @@ jobs:
       before_script:
         - flake8 .
         - sudo apt-get update
-        - sudo apt-get install oracle-java8-installer
-        - sudo update-java-alternatives -s java-8-oracle
+        - sudo apt-get install default-jdk
       script:
         - python scripts/ttl2others.py trellis.ttl
         - html5validator
@@ -28,8 +27,7 @@ jobs:
       before_script:
         - flake8 .
         - sudo apt-get update
-        - sudo apt-get install oracle-java8-installer
-        - sudo update-java-alternatives -s java-8-oracle
+        - sudo apt-get install default-jdk
       script:
         - python3 scripts/ttl2others.py trellis.ttl
         - html5validator
