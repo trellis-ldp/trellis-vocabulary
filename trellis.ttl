@@ -80,6 +80,12 @@
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
+:PreferAbsoluteIRIs a rdfs:Resource ;
+    rdfs:label "prefer absolute IRIs"@en ;
+    rdfs:comment "IRI hint for a server to produce absolute IRIs, if the serialization supports it."@en ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
+
 :PreferAccessControl a rdfs:Resource ;
     rdfs:label "prefer access control"@en ;
     rdfs:comment "IRI identifying a LDPR's access control triples"@en ;
@@ -89,6 +95,12 @@
 :PreferAudit a rdfs:Resource ;
     rdfs:label "prefer audit"@en ;
     rdfs:comment "IRI identifying a LDPR's audit triples"@en ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
+
+:PreferRelativeIRIs a rdfs:Resource ;
+    rdfs:label "prefer relative IRIs"@en ;
+    rdfs:comment "IRI hint for a server to produce relative IRIs, if the serialization supports it."@en ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
