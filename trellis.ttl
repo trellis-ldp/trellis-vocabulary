@@ -80,12 +80,6 @@
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
-:PreferAbsoluteIRIs a rdfs:Resource ;
-    rdfs:label "prefer absolute IRIs"@en ;
-    rdfs:comment "IRI hint for a server to produce absolute IRIs, if the serialization supports it."@en ;
-    rdfs:isDefinedBy : ;
-    vs:term_status "working-draft" .
-
 :PreferAccessControl a rdfs:Resource ;
     rdfs:label "prefer access control"@en ;
     rdfs:comment "IRI identifying a LDPR's access control triples"@en ;
@@ -98,12 +92,6 @@
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
-:PreferRelativeIRIs a rdfs:Resource ;
-    rdfs:label "prefer relative IRIs"@en ;
-    rdfs:comment "IRI hint for a server to produce relative IRIs, if the serialization supports it."@en ;
-    rdfs:isDefinedBy : ;
-    vs:term_status "working-draft" .
-
 :PreferServerManaged a rdfs:Resource ;
     rdfs:label "prefer server managed"@en ;
     rdfs:comment "IRI identifying a LDPR's server-managed triples"@en ;
@@ -113,6 +101,18 @@
 :PreferUserManaged a rdfs:Resource ;
     rdfs:label "prefer user managed"@en ;
     rdfs:comment "IRI identifying a LDP-RS's user-managed resource triples"@en ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
+
+:SerializationAbsolute a rdfs:Resource ;
+    rdfs:label "serialization absolute"@en ;
+    rdfs:comment "IRI hint for a server to produce absolute IRIs, if the serialization supports it."@en ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
+
+:SerializationRelative a rdfs:Resource ;
+    rdfs:label "serialization relative"@en ;
+    rdfs:comment "IRI hint for a server to produce relative IRIs, if the serialization supports it."@en ;
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
