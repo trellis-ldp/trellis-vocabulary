@@ -11,7 +11,7 @@
     rdfs:label "Trellis Linked Data Server Vocabulary"@en ;
     rdfs:comment "Trellis is an implementation of the Linked Data Platform. This vocabulary defines Classes, Properties and IRIs that are used in Trellis."@en ;
     rdfs:seeAlso <http://www.w3.org/TR/ldp/> ;
-    owl:versionInfo "0.10" ;
+    owl:versionInfo "0.12" ;
     vann:preferredNamespaceUri "http://www.trellisldp.org/ns/trellis#" ;
     vann:preferredNamespacePrefix "trellis" .
 
@@ -33,7 +33,11 @@
 # --------------
 #   Properties
 # --------------
-
+:effectiveAcl a rdf:Property ;
+    rdfs:label "effective ACL"@en ;
+    rdfs:comment "The ACL that currently controls the resource in question."@en ;
+    rdfs:isDefinedBy : ;
+    vs:term_status "working-draft" .
 
 # ----------------------
 #   Named Individuals
