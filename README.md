@@ -1,6 +1,6 @@
 # trellis-vocabulary
 
-[![Build Status](https://travis-ci.com/trellis-ldp/trellis-vocabulary.svg?branch=master)](https://travis-ci.com/trellis-ldp/trellis-vocabulary)
+[![Build Status](https://travis-ci.com/trellis-ldp/trellis-vocabulary.svg?branch=main)](https://travis-ci.com/trellis-ldp/trellis-vocabulary)
 
 Vocabularies for the Trellis repository
 
