@@ -1,4 +1,4 @@
-name: Trellis Vocabulary
+name: Trellis Vocabulary Deployment
 
 on:
   push:
