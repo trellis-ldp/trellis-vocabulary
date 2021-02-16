@@ -1,7 +1,7 @@
 {
     "@context": {
         "trellis": "http://www.trellisldp.org/ns/trellis#",
-        "state" {
+        "state": {
             "@id": "trellis:resourceState"
         }
     }
