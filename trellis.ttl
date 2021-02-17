@@ -39,12 +39,6 @@
     rdfs:isDefinedBy : ;
     vs:term_status "working-draft" .
 
-:resourceState a rdf:Property ;
-    rdfs:label "resource state"@en ;
-    rdfs:comment "An indication of the state of a resource. For example, an ETag value."@en ;
-    rdfs:isDefinedBy : ;
-    vs:term_status "working-draft" .
-
 # ----------------------
 #   Named Individuals
 # ----------------------
